@@ -1,0 +1,23 @@
+@hostname = 127.0.0.1
+@port = 80
+@token_login = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzEyNDI2ODMyLCJleHAiOjE3MTI0MzA0MzIsIm5iZiI6MTcxMjQyNjgzMiwianRpIjoiNGRFRnVEUWRyN2RkajA2OCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiaWQiOjEsIm1vYmlsZSI6IjA5MTI5NjgxMDU3In0.GnHQeEQ7JEVYS93hGW2krqfnq-ae2xCBA9dsqN-vQ-I
+@token_message = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzEyNDI4MjMxLCJleHAiOjE3MTI0MzE4MzEsIm5iZiI6MTcxMjQyODIzMSwianRpIjoiVUoyMjhOcFd3STlWZG52TSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3IiwiaWQiOjEsIm1vYmlsZSI6IjA5MTI5NjgxMDU3In0.zaToSQ-3kxvoAI0WiWaaJdTL7GtWuvNpB8YjssD2Aic
+
+### Login
+POST http://@hostname:@port/api/auth/login
+Content-Type: application/json
+
+{
+    "mobile": "09129681057",
+    "password": "123456"
+}
+
+### Logout
+POST http://@hostname:@port/api/auth/logout
+Authorization: Bearer @token_login
+Content-Type: application/json
+
+{
+    "mobile": "09129681057",
+    "password": "123456"
+}
